@@ -1,0 +1,48 @@
+.container{
+    margin:auto;    
+    width: 58%;
+    /* border: 3px solid green; */
+    padding: 0px;
+    /* box-shadow: 10px 10px #fff; */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+label,h3,.email{
+    color: red;
+}
+.checkBoxes label{
+margin: 4px !important;
+border-radius: 22px;
+width: 200px;
+
+}
+.checkBoxe label{
+    margin: 4px !important;
+    border-radius: 22px;
+    padding: 4px 8px !important;
+    font-size: 15px !important;
+    /* width: 200px; */
+    
+    }
+
+    .secondDiv{
+        border-left: 1px solid #ccc;
+        height: 75vh;
+    }
+
+    .fb{
+        background-color: #4267b2;
+        color:#fff;
+        padding: 3px 15px;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-bottom: 10px !important;
+    }
+    .twitter{
+        margin-top: 10px !important;
+        background-color: rgb(29, 155, 240);
+        color:#fff;
+        padding: 3px 15px;
+        text-decoration: none;
+        border-radius: 12px;
+    }

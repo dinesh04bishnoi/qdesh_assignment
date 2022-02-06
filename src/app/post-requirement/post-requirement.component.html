@@ -1,0 +1,206 @@
+<h3 class="text-center my-5">Post Your Workspace Requirement</h3>
+<div class="container mb-5">
+  <img src="https://stage.qdesq.com/images/postrequirement.7303a837.png" alt="">
+  <div class="row">
+    
+    <div class="col-9">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class=" px-3 py-1">
+        <label for="name1" class="form-label">Name*:</label>
+        <input type="text" class="form-control" formControlName="clientName" id="name1" placeholder="Youre Name here">
+        <!-- <div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
+            <p *ngIf="name.errors.required" class="text-danger">Name is required</p>
+            <p *ngIf="name.errors.pattern" class="text-danger">Name is Invalid</p>
+          </div> -->
+      </div>
+      <div class=" px-3 py-1">
+        <label for="email" class="form-label">Email*:</label>
+        <input type="email" class="form-control" formControlName="clientEmail" id="email" placeholder="Your e-mail here">
+        <!-- <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+            <p *ngIf="email.errors.required" class="text-danger">Email is required</p>
+            <p *ngIf="email.errors.pattern" class="text-danger">Invalid email address.</p>
+          </div>  -->
+    </div>
+      <div class="d-flex form-row">
+        <div class="col-6 px-3 py-1">
+          <label for="phone">Phone Number*:</label>
+          <input type="text" class="form-control" formControlName="clientNumber" id="phone" placeholder="Your phone number here" required>
+          <!-- <div class="form-control-feedback" *ngIf="phone.errors && (phone.dirty || phone.touched)">
+            <p *ngIf="phone.errors.required" class="text-danger">Phone Number is required</p>
+            <p *ngIf="phone.errors.pattern" class="text-danger">Phone number must contain  10 digits.</p>
+          </div> -->
+        </div>
+        <div class="col-6 px-3 py-1 ">
+          <label for="numerOfPerson">Number of persons*:</label>
+          <input type="number" class="form-control" formControlName="seats" id="numerOfPerson" placeholder="Number of persons" required>
+
+        </div>
+      </div>
+      <div class="d-flex form-row">
+        <div class="col-6 px-3 py-1">
+          <label for="company">Company</label>
+          <input type="text" class="form-control" formControlName="company" id="company" placeholder="Your company name.." required>          
+        </div>
+
+        <div class="col-6 px-3 py-1">
+          <label for="startDate">Start Date*:</label>
+          <select class="form-select" formControlName="startDate" id="startDate" aria-label="Floating label select example">
+            <option selected> Please Select</option>
+            <option value="Within 1 week">Within 1 week</option>
+            <option value="Within 1 month">Within 1 month</option>
+            <option value="Within 3 month">Within 3 month</option>
+            <option value="Within 3-6 month">Within 3-6 month</option>
+            <option value="More than 6 month">More than 6 month</option>
+            <option value="Not Sure">Not Sure</option>
+           </select>
+        </div>
+      </div>
+
+      <div class=" px-3 py-1 ">
+        <label for="selectCity">Select city where workspace is required</label>
+        <br>
+        <div class="checkBoxes d-flex align-items-center justify-content-between">
+          
+          <input type="checkbox" class="btn-check city"  id="Manali" formControlName="city" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Manali">Manali</label>
+          <input type="checkbox" class="btn-check city"  id="Ahemdabad" formControlName="city" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Ahemdabad">Ahemdabad</label>          
+          <input type="checkbox" class="btn-check city"  formControlName="city" id="Cebu" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Cebu">Cebu</label>
+          <input type="checkbox" class="btn-check city"  id="Chandigarh" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Chandigarh">Chandigarh</label> 
+          <input type="checkbox" class="btn-check city"  id="Chennai" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Chennai">Chennai</label> 
+          <input type="checkbox" class="btn-check city"  id="Goa" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Goa">Goa</label> 
+        </div>
+        <div class="checkBoxes d-flex align-items-center justify-content-between">
+          <input type="checkbox" class="btn-check city"  id="Coimbatore" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Coimbatore">Coimbatore</label>
+          <input type="checkbox" class="btn-check city"  id="Davao" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Davao">Davao</label> 
+          <input type="checkbox" class="btn-check city"  id="Dehradun" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Dehradun">Dehradun</label>
+          <input type="checkbox" class="btn-check city"  id="Delhi" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Delhi">Delhi</label>
+          <input type="checkbox" class="btn-check city"  id="Dubai" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Dubai">Dubai</label> 
+          <input type="checkbox" class="btn-check city"  id="Bangaluru" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Bangaluru">Bangaluru</label>
+        
+        </div>
+        <div class="checkBoxes d-flex align-items-center justify-content-between">
+          <input type="checkbox" class="btn-check city"  id="Gurugram" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Gurugram">Gurugram</label>
+          <input type="checkbox" class="btn-check city"  id="Hyderabad" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Hyderabad">Hyderabad</label> 
+          <input type="checkbox" class="btn-check city"  id="Indore" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Indore">Indore</label>
+          <input type="checkbox" class="btn-check city"  id="Jaipur" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Jaipur">Jaipur</label>
+          <input type="checkbox" class="btn-check city"  id="Kochi" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Kochi">Kochi</label> 
+          <input type="checkbox" class="btn-check city"  id="Kolkata" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Kolkata">Kolkata</label> 
+        </div>
+        <div class="checkBoxes d-flex align-items-center justify-content-between">
+          <input type="checkbox" class="btn-check city"  id="Lucknow" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Lucknow">Lucknow</label>
+          <input type="checkbox" class="btn-check city"  id="Manila" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Manila">Manila</label> 
+          <input type="checkbox" class="btn-check city"  id="Mumbai" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Mumbai">Mumbai</label>
+          <input type="checkbox" class="btn-check city"  id="Nagpur" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Nagpur">Nagpur</label>
+          <input type="checkbox" class="btn-check city"  id="Noida" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Noida">Noida</label> 
+          <input type="checkbox" class="btn-check city"  id="Pune" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Pune">Pune</label> 
+        </div>
+        <!-- <div class="checkBoxes checkBoxes d-flex  justify-content-between">
+          <input type="checkbox" class="btn-check" id="Other" autocomplete="off">
+          <label class="btn btn-outline-danger" for="Other">Other</label>          
+        </div> -->
+      </div>
+
+      <div class="d-flex form-row">
+        <div class="col-6 px-3 py-1">
+          <label for="timeToConnect">Preferred time to connect:</label>
+          <select class="form-select" formControlName="preferredTime" id="timeToConnect" aria-label="Floating label select example">
+            <option selected> Please Select</option>
+            <option value="9:00 - 12:00">9:00 - 12:00</option>
+            <option value="12:00 - 4:00">12:00 - 4:00</option>
+            <option value="4:00 - 8:00">4:00 - 8:00</option>
+            <option value="After 8">After 8</option>            
+           </select>
+        </div>
+
+        <div class="col-6 px-3 py-1">
+          <label for="modeToConnect">Preferred mode to connect:</label>
+          <select class="form-select" formControlName="preferredMode" id="modeToConnect" aria-label="Floating label select example">
+            <option selected> Please Select</option>
+            <option value="Whatsapp">Whatsapp</option>
+            <option value="Email">Email</option>
+            <option value="Call">Call</option>           
+           </select>
+        </div>
+      </div>
+
+      <div class="px-3 py-1">
+        <label for="aboutQdesq">From where did you get to know about Qdesq?</label>
+        <select class="form-select" formControlName="leadSource" aria-label="Default select example">
+          <option selected>Select Source</option>
+          <option value="FaceBook">FaceBook</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Google">Google</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Just Dial">Just Dial</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class=" px-3 py-1 ">
+        <label for="selectCity">Select workspace Type</label>
+        <br>
+        <div class="checkBoxe d-flex align-items-center ">          
+          <input type="checkbox" class="btn-check workSpace" id="coworkingSpace" autocomplete="off">
+          <label class="btn btn-outline-danger" for="coworkingSpace">Coworking Space</label>
+          <input type="checkbox" class="btn-check workSpace" id="meetingRoom" autocomplete="off">
+          <label class="btn btn-outline-danger" for="meetingRoom">Meeting Room</label>          
+          <input type="checkbox" class="btn-check workSpace" id="privateOffice" autocomplete="off">
+          <label class="btn btn-outline-danger" for="privateOffice">Private Office</label>
+          <input type="checkbox" class="btn-check workSpace" id="trainingRoom" autocomplete="off">
+          <label class="btn btn-outline-danger" for="trainingRoom">Training Room</label>    
+          <input type="checkbox" class="btn-check workSpace" id="virtualStatus" autocomplete="off">
+          <label class="btn btn-outline-danger" for="virtualStatus">Virtual Office</label>         
+        </div>       
+      </div>
+      
+      <div class=" px-3 py-1 ">        
+          <label for="yourMessage" class="form-label">Your Message/Requirement*:</label>
+          <textarea class="form-control" formControlName="yourMessage" id="yourMessage" placeholder="Type here..." rows="3"></textarea>       
+      </div>
+      <div class="d-grid gap-2 px-3 py-1">
+        <button class="btn btn-success" type="submit" [disabled]="!myForm.valid">Submit</button>
+        <!--  -->
+      </div>
+    </form>
+    </div>
+    
+    <div class="secondDiv col-3 mt-4">
+        <i class=" email far fa-envelope">&nbsp; Email</i>  <br>
+        <span>founders@qdesq.com</span>
+        <hr>
+        <i class="email fas fa-phone-alt"></i>&nbsp;<span class="email">CONTACT NO.</span> <br>        
+        +91-9599870871 <br>
+        +91-8826112239
+        <hr>
+        <i class="mb-3 email fas fa-share-alt"></i>&nbsp; <span class="email">Share</span><br>
+        <!-- <button type="button" class="btn btn-sm btn-primary"><i class="fab fa-facebook"></i>&nbsp; Share</button> -->
+       <a class="fb" target="blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i>&nbsp; Share</a> <br><br>
+       <a class="twitter" target="blank" href="https://twitter.com/"><i class="fab fa-twitter"></i>&nbsp; Tweet</a>
+
+    </div>
+  </div>
+</div>
+
